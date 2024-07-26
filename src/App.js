@@ -21,13 +21,14 @@ function App() {
         color: darkMode ? "white" : "",
       }}
     >
+    <div>
+    </div>
       <Navbar />
       <Intro />
       <Services />
       <Experience />
       <Works />
       <Portfolio />
-      <Testimonial />
       <Contact />
       <Footer />
     </div>

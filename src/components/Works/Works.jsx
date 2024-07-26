@@ -1,10 +1,9 @@
 import React, { useContext } from "react";
 import "./Works.css";
-import Upwork from "../../img/Upwork.png";
-import Fiverr from "../../img/fiverr.png";
-import Amazon from "../../img/amazon.png";
-import Shopify from "../../img/Shopify.png";
-import Facebook from "../../img/Facebook.png";
+
+import Reliance from "../../img/reliance.png";
+import WorldBank from "../../img/wb.png";
+import Jackson from "../../img/Jackson.png";
 import { themeContext } from "../../Context";
 import { motion } from "framer-motion";
 import {Link} from 'react-scroll'
@@ -24,16 +23,15 @@ const Works = () => {
             Works for All these
           </span>
           <span>Brands & Clients</span>
-          <spane>
-            Lorem ispum is simpley dummy text of printing of printing Lorem
+          <span>
+            I have had the pleasure of collaborating with numerous esteemed brands and clients across various industries.
             <br />
-            ispum is simpley dummy text of printingLorem ispum is simpley dummy
-            text
+            My experience spans from innovative startups to well-established corporations, allowing me to deliver tailored solutions that drive success.
             <br />
-            y dummy text of printingLorem
+            Over the years, I have developed and executed projects that leverage cutting-edge technologies and creative strategies.
             <br />
-            ispum is simpley dummy text of printing
-          </spane>
+            My approach ensures that each client receives a unique and effective solution, crafted to meet their specific needs and objectives.
+          </span>
           <Link to="contact" smooth={true} spy={true}>
             <button className="button s-button">Hire Me</button>
           </Link>
@@ -51,28 +49,20 @@ const Works = () => {
           whileInView={{ rotate: 0 }}
           viewport={{ margin: "-40px" }}
           transition={{ duration: 3.5, type: "spring" }}
-          className="w-mainCircle"
+          className="w-mainTriangle"
         >
-          <div className="w-secCircle">
-            <img src={Upwork} alt="" />
+          <div className="w-secTriangle" id="node1">
+            <img src={Reliance} alt="Reliance" />
           </div>
-          <div className="w-secCircle">
-            <img src={Fiverr} alt="" />
+          <div className="w-secTriangle" id="node2">
+            <img src={WorldBank} alt="WorldBank" />
           </div>
-          <div className="w-secCircle">
-            <img src={Amazon} alt="" />
-          </div>{" "}
-          <div className="w-secCircle">
-            <img src={Shopify} alt="" />
-          </div>
-          <div className="w-secCircle">
-            <img src={Facebook} alt="" />
+          <div className="w-secTriangle" id="node3">
+            <img src={Jackson} alt="Jackson" />
           </div>
         </motion.div>
-        {/* background Circles */}
-        <div className="w-backCircle blueCircle"></div>
-        <div className="w-backCircle yellowCircle"></div>
       </div>
+
     </div>
   );
 };

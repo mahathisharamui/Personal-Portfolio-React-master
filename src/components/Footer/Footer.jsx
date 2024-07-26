@@ -10,11 +10,9 @@ const Footer = () => {
     <div className="footer">
       <img src={Wave} alt="" style={{ width: "100%" }} />
       <div className="f-content">
-        <span>mahathi.sharma3@gmail.com</span>
-        <div className="f-icons">
-          <Insta color="white" size={"3rem"} />
-          <Facebook color="white" size={"3rem"} />
-          <Gitub color="white" size={"3rem"} />
+        <span className="tagline">"Innovating one project at a time"</span>
+        <div className="footer-decoration">
+          <span className="quote">"The best way to predict the future is to invent it." – Alan Kay</span>
         </div>
       </div>
     </div>

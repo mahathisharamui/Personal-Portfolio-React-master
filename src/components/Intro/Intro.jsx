@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import "./Intro.css";
 import Vector1 from "../../img/Vector1.png";
 import Vector2 from "../../img/Vector2.png";
-import boy from "../../img/boy.png";
+import boy from "../../img/me1.png";
 import glassesimoji from "../../img/glassesimoji.png";
 import thumbup from "../../img/thumbup.png";
 import crown from "../../img/crown.png";
@@ -27,7 +27,7 @@ const Intro = () => {
       <div className="i-left">
         <div className="i-name">
           {/* yahan change hy darkmode ka */}
-          <span style={{ color: darkMode ? "white" : "" }}>Hy! I Am</span>
+          <span style={{ color: darkMode ? "white" : "" }}>Hey! I Am</span>
           <span>Mahathi Sharma</span>
           <span>
             Frontend Developer with high level of experience in web designing
@@ -38,11 +38,11 @@ const Intro = () => {
           <button className="button i-button">Hire me</button>
         </Link>
         {/* social icons */}
-        <div className="i-icons">
-          <img src={Github} alt="" />
-          <img src={LinkedIn} alt="" />
-          <img src={Instagram} alt="" />
-        </div>
+{/*         <div className="i-icons"> */}
+{/*           <img src={Github} alt="" /> */}
+{/*           <img src={LinkedIn} alt="" /> */}
+{/*           <img src={Instagram} alt="" /> */}
+{/*         </div> */}
       </div>
       {/* right image side */}
       <div className="i-right">
@@ -60,7 +60,7 @@ const Intro = () => {
 
         <motion.div
           initial={{ top: "-4%", left: "74%" }}
-          whileInView={{ left: "68%" }}
+          whileInView={{ left: "60%" }}
           transition={transition}
           className="floating-div"
         >
@@ -75,7 +75,7 @@ const Intro = () => {
           className="floating-div"
         >
           {/* floatinDiv mein change hy dark mode ka */}
-          <FloatinDiv img={thumbup} text1="Best Design" text2="Award" />
+          <FloatinDiv img={thumbup} text1="UI/UX" text2="Designer" />
         </motion.div>
 
         <div className="blur" style={{ background: "rgb(238 210 255)" }}></div>

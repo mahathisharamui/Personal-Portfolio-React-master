@@ -1,12 +1,11 @@
 .works {
-  padding: 0 3rem 0 3rem;
+  padding: 0 3rem;
   display: flex;
   height: 90vh;
   margin-top: 4rem;
-
-  /* scroll */
   align-items: center;
 }
+
 /* left side */
 .awesome {
   display: flex;
@@ -19,16 +18,20 @@
   font-size: 2.5rem;
   font-weight: bold;
 }
+
 .awesome > :nth-child(2) {
   color: var(--orange);
   font-size: 2.5rem;
   font-weight: bold;
 }
+
 .awesome > :nth-child(3) {
   color: var(--gray);
-  font-size: 14px;
+  font-size: 0.7 rem; /* Increased font size */
+  line-height: 1.6; /* Increased line height for better readability */
   margin-top: 1rem;
 }
+
 .s-button {
   width: 8rem;
   height: 2rem;
@@ -38,78 +41,79 @@
 /* right side */
 .w-right {
   position: relative;
+  width: 400px; /* Adjust width as needed */
+  height: 400px; /* Adjust height as needed */
+  margin: auto;
 }
 
-.w-mainCircle {
-  left: 9rem;
+.w-mainTriangle {
   position: relative;
-  width: 18rem;
-  height: 18rem;
-  border-radius: 100%;
-  box-shadow: var(--smboxShadow);
-  top: 2rem;
-  background: white;
-  /* darkMode */
-  z-index: 2;
-}
-.w-mainCircle > * {
-  position: absolute;
-}
-.w-mainCircle > :nth-child(1) {
-  top: -3rem;
-  left: 6rem;
-}
-.w-mainCircle > :nth-child(2) {
-  left: -3rem;
-  top: 5rem;
-}
-.w-mainCircle > :nth-child(3) {
-  left: 6rem;
-  top: 5rem;
-}
-.w-mainCircle > :nth-child(4) {
-  left: 15rem;
-  top: 5rem;
-}
-.w-mainCircle > :nth-child(5) {
-  left: 6rem;
-  top: 13rem;
-}
-.w-secCircle {
-  width: 6rem;
-  height: 6rem;
-  position: absolute;
-  border-radius: 100%;
-  border: 5px solid #ebebeb;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: "none";
-  box-shadow: var(--smboxShadow);
-  background: white;
+  width: 100%;
+  height: 100%;
 }
 
-.w-secCircle > img {
-  transform: scale(0.6);
+.w-secTriangle {
+  width: 80px; /* Adjust size as needed */
+  height: 80px; /* Adjust size as needed */
+  position: absolute;
 }
 
-.w-backCircle {
+.w-secTriangle#node1 {
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.w-secTriangle#node2 {
+  bottom: 0;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+.w-secTriangle#node3 {
+  bottom: 0;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/* Lines connecting the nodes */
+.line {
   position: absolute;
-  height: 13rem;
-  width: 13rem;
-  border-radius: 100%;
-  /* darkMode */
-  z-index: 1;
+  background-color: black;
 }
-.blueCircle {
-  background: #1949b8;
-  left: 18rem;
-  top: 0rem;
+
+#line1 {
+  width: 2px; /* Adjust thickness as needed */
+  height: calc(100% - 80px); /* Adjust to match the height minus one node */
+  top: 40px; /* Adjust to start below the top node */
+  left: 50%;
+  transform: translateX(-50%);
 }
-.yellowCircle {
-  background: #f5c32c;
-  left: 18rem;
-  top: 8rem;
+
+#line2 {
+  width: calc(50% - 40px); /* Adjust to match half the width minus one node */
+  height: 2px; /* Adjust thickness as needed */
+  bottom: 40px; /* Adjust to be above the bottom nodes */
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#line3 {
+  width: calc(50% - 40px); /* Adjust to match half the width minus one node */
+  height: 2px; /* Adjust thickness as needed */
+  bottom: 40px; /* Adjust to be above the bottom nodes */
+  right: 50%;
+  transform: translateX(50%) rotate(60deg); /* Adjust rotation to match diagonal */
+  transform-origin: bottom left;
+}
+
+#line4 {
+  width: calc(50% - 40px); /* Adjust to match half the width minus one node */
+  height: 2px; /* Adjust thickness as needed */
+  bottom: 40px; /* Adjust to be above the bottom nodes */
+  left: 50%;
+  transform: translateX(-50%) rotate(-60deg); /* Adjust rotation to match diagonal */
+  transform-origin: bottom right;
 }
 
 @media screen and (max-width: 480px) {
@@ -123,14 +127,15 @@
   .w-right {
     display: flex;
     align-items: flex-start;
-    justify-content:start;
+    justify-content: start;
     transform: scale(0.7);
   }
-  .w-mainCircle{
+
+  .w-mainCircle {
     position: static;
   }
-  .w-backCircle{
-    left: 8rem!important;
-  }
 
+  .w-backCircle {
+    left: 8rem !important;
+  }
 }
